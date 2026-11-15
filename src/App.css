@@ -1,0 +1,11 @@
+nav {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+nav a.active {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline;
+}
