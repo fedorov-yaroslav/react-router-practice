@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./NotFound.css";
 
 export const NotFound = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <h2>Кажется такой страницы не существует</h2>
-      <div className="wrapper">
-        <Link to="/">На главную→</Link>
-      </div>
+      <button onClick={() => navigate("/")}>Вернуться на главную</button>
+      <button onClick={() => navigate(-1)}>
+        Вернуться на прошлую страницу
+      </button>
     </>
   );
 };
